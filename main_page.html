@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main_page.css">
+    <title>学期別GPA計算</title>
+</head>
+<body>
+    <div class="header">
+        <h2 class="page-title">GPAシミュレーター</h2>
+        <div class="data-entry">
+            <form action="dataForm">
+                <label for="input-subject-name">科目名</label>
+                <input type="text" id="input-subject-name" size="12">
+                <label for="input-credit">単位</label>
+                <input type="number" id="input-credit" value="0" min="0" max="200">
+                <label for="input-credit">評価</label>
+                <input type="number" id="input-grade" value="0" min="0" max="20">
+                <label for="input-year" class="years"></label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="year" value="1" class="input-year" checked>
+                    <span>1年</span>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="year" value="2" class="input-year">
+                    <span>2年</span>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="year" value="3" class="input-year">
+                    <span>3年</span>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="year" value="4" class="input-year">
+                    <span>4年</span>
+                </label>
+                <label for="input-semester" class="semesters"></label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="semester" value="f" class="input-semester" checked>
+                    <span>前期</span>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="semester" value="s" class="input-semester">
+                    <span>後期</span>
+                </label>
+                <button type="button" id="addRow">追加</button>
+            </form>
+        </div>
+        <p id="cumulative-gpa"></p>
+    </div>
+    <div class="main">
+        <div class="side-content-left">
+            <label for="input-new-data-name">新しいデータ追加</label>
+            <input type="text" id="input-new-data-name" size="12">
+            <button type="button" id="create-new-data">追加</button>
+            <div id="save-load">
+            </div>
+        </div>
+        <div class="centre-content">
+            <div class="tables">
+                <table id="first-year-first-semester-table"></table>
+                <table id="first-year-second-semester-table"></table>
+                <table id="second-year-first-semester-table"></table>
+                <table id="second-year-second-semester-table"></table>
+                <table id="third-year-first-semester-table"></table>
+                <table id="third-year-second-semester-table"></table>
+                <table id="fourth-year-first-semester-table"></table>
+                <table id="fourth-year-second-semester-table"></table>
+            </div>
+        </div>
+        <div class="side-content-right">
+            <div class="gpas">
+                <p id="first-year-first-semester-gpa"></p>
+                <p id="first-year-second-semester-gpa"></p>
+                <p id="second-year-first-semester-gpa"></p>
+                <p id="second-year-second-semester-gpa"></p>
+                <p id="third-year-first-semester-gpa"></p>
+                <p id="third-year-second-semester-gpa"></p>
+                <p id="fourth-year-first-semester-gpa"></p>
+                <p id="fourth-year-second-semester-gpa"></p>
+                <p id="first-gpa"></p>
+                <p id="second-gpa"></p>
+                <p id="third-gpa"></p>
+                <p id="fourth-gpa"></p>
+                <p id="first-second-gpa"></p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./GPAcalculate.js"></script>
+</body>
+</html>

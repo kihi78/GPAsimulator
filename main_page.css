@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+}
+
+label span {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    border-bottom: 2px solid #e3e3e3;
+    justify-content: space-between;
+}
+
+.page-title {
+    width: 240px;
+    min-width: 220px;
+    text-align: center
+}
+
+.data-entry {
+    margin-top: 22px;
+    margin-left: 40px;
+}
+
+.years,
+.semesters {
+    margin-left: 15px;
+}
+
+.input-year {
+    margin: 0;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.input-semester {
+    margin: 0;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#addRow {
+    padding: 0;
+    margin-left: 15px;
+    width: 48px;
+    height: 24px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#addRow:hover {
+    background-color: #ccc;
+    border: 1px solid #bbb;
+}
+
+#cumulative-gpa {
+    margin-top: 22px;
+    margin-right: 60px;
+    min-width: 125px;
+    font-size: 20px;
+}
+
+.side-content-left {
+    padding: 10px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 170px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    z-index: 900;
+}
+
+#input-new-data-name {
+    padding: 0;
+    width: 110px;
+    height: 20px;
+    font-size: 14px;
+}
+
+#create-new-data {
+    padding: 0;
+    width: 35px;
+    height: 24px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#create-new-data:hover {
+    background-color: #ccc;
+    border: 1px solid #bbb;
+}
+
+.save-btn,
+.load-btn,
+.delete-btn {
+    padding: 0;
+    width: 48px;
+    height: 24px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-btn:hover,
+.load-btn:hover,
+.delete-btn:hover {
+    background-color: #ccc;
+    border: 1px solid #bbb;
+}
+
+.centre-content {
+    margin-top: 200px;
+    margin-left: 175px;
+    margin-right: 162px;
+    width: calc(100vw - 337px);
+    display: flex;
+    justify-content: center;
+}
+
+.side-content-right {
+    padding: 15px;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 132px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    z-index: 900;
+}
+
+.tables {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: calc(100% - 4vw);
+    max-width: 700px;
+    flex-shrink: 0;
+}
+
+table {
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #bbb;
+    padding: 1px;
+    text-align: left;
+}
+
+td, th:not(.course-name) {
+    height: 20px;
+    max-height: 20px;
+}
+
+.course-name {
+    width: 100px;
+    min-width: 40px;
+    max-width: 100px;
+    text-align: center;
+}
+
+td:nth-child(1):not(.course-name),
+th:nth-child(1):not(.course-name) {
+    width: 30px;
+    height: 10px;
+    min-width: 30px;
+    max-width: 30px;
+    text-align: center;
+}
+
+td:nth-child(2),
+th:nth-child(2) {
+    padding-left: 5px;
+    width: calc(100% - 115px);
+    min-width: 150px;
+    max-width: 200px;
+}
+
+td:nth-child(3),
+th:nth-child(3) {
+    width: 20px;
+    min-width: 10px;
+    max-width: 20px;
+    text-align: center;
+}
+
+td:nth-child(4),
+th:nth-child(4) {
+    width: 20px;
+    min-width: 10px;
+    max-width: 20px;
+    text-align: center;
+}
+
+td:nth-child(5),
+th:nth-child(5) {
+    width: 45px;
+    min-width: 45px;
+    max-width: 45px;
+    text-align: center;
+    background-color: #eee;
+    font-size: 1px;
+}
+
+td:nth-child(5):hover,
+th:nth-child(5):hover {
+    background-color: #ddd;
+    transition: background-color 0.2s;
+}
+
+.cell-delete-btn {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
